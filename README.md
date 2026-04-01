@@ -1,16 +1,14 @@
-# Lab 1 - Build
+# Lab 1 - Deploy to Prod
 
-### Summary: Setup a CI Pipeline, including running source code tests, building the executable, building and pushing the artifact to a remote repository
+### Summary: Setup a Pipeline, to deploy the backend to a production deployment
 
-### Outcome: A Deployable artifact
+### Outcome: A Deployment Pipeline
 
 ### Learning Objective(s):
 
-- Configure a basic pipeline using Harness CIE
+- Understand the Harness Pipeline setup (including services and environments)
 
-- Build and Deploy an artifact to a remote repository using Harness CIE
 
-- Run unit tests during the process to verify that the build is successful using Harness CIE
 
 
 
