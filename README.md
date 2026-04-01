@@ -10,10 +10,21 @@
 - Utilise complex deployment strategies to reduce blast radius of a release 
 
 **Steps**
+1. From the left hand menu, navigate to **Projects** → **Select the project available**\
+   ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXfhuMykMsIHl-7FjliWssHc0uwRpdLdrnq7GkGAI0g6UBZM69F1zpQ8ZA8N_vMqjpoGFYFR_weJk7OtOGGa2bksIaS6BlktwytmuJ1THM3e8O6tDT18HYWwFyGUye8ubsrHBChI8ORrCQ88JcKWpLjQ0DsXDS0NSZrkfZ4RUQ?key=cRG2cvp_PHVW0KG2Gq6Y_A)
 
-5. In the existing pipeline, add a Deployment stage by clicking **Add Stage** and select **Deploy** as the Stage Type
+1) From the left hand side menu select **Pipelines**
 
-6. Enter the following values and click on **Set Up Stage**
+2) Click **+ Create a Pipeline**, enter the following values, then click **Start**
+   
+| Field                                  | Value            | Notes
+| -------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------ |
+| Name                                   |workshop|                                                                                            |
+| How do you want to setup your pipeline |Inline| This indicates that Harness (rather than Git) will be the source of truth for the pipeline |
+
+3. From Pipeline Studio, Click **Add Stage** and select **Deploy** as the Stage Type
+
+4. Enter the following values and click on **Set Up Stage**
 
 
 | Input           | Value          | Notes |
@@ -21,7 +32,7 @@
 | Stage Name      |backend|       |
 | Deployment Type |Kubernetes|       |
 
-7. Configure the **backend** Stage with the following\
+5. Configure the **backend** Stage with the following\
    **Service**
 
 - Click **- Select -**  on the **"Select Service"** input box and configure as follows:
@@ -35,17 +46,32 @@
 
 **Environment**
 
-The target infrastructure has been pre-created for us and we used it in the previous stage. To reuse the same environment
+The target infrastructure has been pre-created for us. The application will be deployed to a k8s cluster on the given namespace  
 
-- Click **- Propagate Environment From**
+- Click **- Select -** on the **"Specify Environment"** input box 
 
-- Select **Stage \[frontend]**
+- Select **prod** environment and click **"Apply Selected"**
 
-- Click **Continue**
+| Input | Value | Notes                                                             |
+| ----- | ----- | ----------------------------------------------------------------- |
+| Name  |prod| Make sure to select the environment and infrastructure definition |
+
+- Click **- Select -** on the **"Specify Infrastructure"** input box
+
+-  From the dropdown select k8s
+
+| Input | Value | Notes |
+| ----- | ----- | ----- |
+| Name  |k8s|       |
+
+- Click **Continue** 
 
 **Execution**
 
 - Select **Canary**  and click on **Use Strategy**
+
+6. Click **Save** and then click **Run** to execute the pipeline with the following inputs. As a bonus, save your inputs as an Input Set before executing (see below)
+
 
 
 
