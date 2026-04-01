@@ -7,8 +7,45 @@
 ### Learning Objective(s):
 
 - Understand the Harness Pipeline setup (including services and environments)
+- Utilise complex deployment strategies to reduce blast radius of a release 
+
+**Steps**
+
+5. In the existing pipeline, add a Deployment stage by clicking **Add Stage** and select **Deploy** as the Stage Type
+
+6. Enter the following values and click on **Set Up Stage**
 
 
+| Input           | Value          | Notes |
+| --------------- | -------------- | ----- |
+| Stage Name      |backend|       |
+| Deployment Type |Kubernetes|       |
+
+7. Configure the **backend** Stage with the following\
+   **Service**
+
+- Click **- Select -**  on the **"Select Service"** input box and configure as follows:
+
+
+| Input | Value       | Notes |
+| ----- | ----------- | ----- |
+| Name  |backend|       |
+
+- Click **Apply Selected** and then click **Continue** to go to the **"Environment"** tab
+
+**Environment**
+
+The target infrastructure has been pre-created for us and we used it in the previous stage. To reuse the same environment
+
+- Click **- Propagate Environment From**
+
+- Select **Stage \[frontend]**
+
+- Click **Continue**
+
+**Execution**
+
+- Select **Canary**  and click on **Use Strategy**
 
 
 
