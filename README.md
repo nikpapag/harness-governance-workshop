@@ -19,7 +19,7 @@
    
 | Field                                  | Value            | Notes
 | -------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------ |
-| Name                                   |workshop|                                                                                            |
+| **Name**                                   |<pre>`workshop`</pre>|                                                                                            |
 | How do you want to setup your pipeline |Inline| This indicates that Harness (rather than Git) will be the source of truth for the pipeline |
 
 3. From Pipeline Studio, Click **Add Stage** and select **Deploy** as the Stage Type
@@ -29,7 +29,7 @@
 
 | Input           | Value          | Notes |
 | --------------- | -------------- | ----- |
-| Stage Name      |backend|       |
+| **Stage Name**      |<pre>`backend`</pre>|       |
 | Deployment Type |Kubernetes|       |
 
 5. Configure the **backend** Stage with the following\
@@ -40,7 +40,7 @@
 
 | Input | Value       | Notes |
 | ----- | ----------- | ----- |
-| Name  |backend|       |
+| **Name**  |<pre>`backend`</pre>|       |
 
 - Click **Apply Selected** and then click **Continue** to go to the **"Environment"** tab
 
@@ -72,6 +72,33 @@ The target infrastructure has been pre-created for us. The application will be d
 
 6. Click **Save** and then click **Run** to execute the pipeline with the following inputs. As a bonus, save your inputs as an Input Set before executing (see below)
 
+# Lab 2 - Security
+
+**Summary:** Since the pipeline deploys to prod it is a requirement to have a security validation step prior to the deploy prod stage. 
+
+<img width="979" height="445" alt="image" src="https://github.com/user-attachments/assets/b3603575-acb3-45c3-a8b5-7731d06b36ba" />
+
+**Learning Objective(s):**
+
+- Understand how governance plays a role in the path to production
+
+- Reusable templates make developer’s life easier
+
+- DevSecOps practices can be easily achieved
+
+**Steps**
+
+1. In the existing pipeline, **before** backend stage click on the plus icon to add a new step
+2. From the available stage types select **Security**
+3. Setup the stage
+
+| Input | Value | Notes |
+| ----- | ----- | ----- |
+| **Stage Name**  | <pre>`Security Validation`</pre> |       |
+| **Repository**  | <pre>`harness repo`</pre> | |
+
+
+4. 
 
 
 
