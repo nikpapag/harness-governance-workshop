@@ -298,4 +298,19 @@ semver_compare(a, null, null) := true
 4. Navigate to the **workshop** pipeline and try to run it
 
 
+**Enforced Change Approval**
+<img width="973" height="345" alt="image" src="https://github.com/user-attachments/assets/cbd71d38-fcaa-4d20-9248-ca2c7fa09b97" />
+
+**Flow control**
+1. In the pipeline in edit mode, after the backend deploy stage click on **+Add Stage**
+2. Select **Use template**
+3. From the list of available template pick the **Automated CAB** template
+4. Give it a name
+
+> [!IMPORTANT]
+> Notice the use of the change approval board after we deploy to prod
+
+<img width="541" height="170" alt="image" src="https://github.com/user-attachments/assets/d6ffffdd-43df-40e8-9fce-01372c07e3d2" />
+
+
 
