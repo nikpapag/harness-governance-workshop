@@ -108,9 +108,10 @@ The target infrastructure has been pre-created for us. The application will be d
 | **Command**  | <pre>`echo "security"`</pre> | To speed up the process we just run an echo command |   
 
 
+7. Apply changes
+8. Save the pipeline and run it
 
-
-# Lab 2 - DevSecOps
+# Lab 3 - DevSecOps
 
 **Summary:** Our security team has implemented orchestration of **Fortify** and **OWASP** scans for our code in a reusable form **(templates)**. In order to improve our security posture they have also added policies to enforce us to include those templates
 
