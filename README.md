@@ -163,8 +163,7 @@ After the **Security** stage is complete, go to the **Security Tests** tab to se
 
 4. Set the rego to the following and click **Save**
 
-<!---->
-
+```
 package securityTests
 
 import future.keywords.in
@@ -240,8 +239,7 @@ semver_compare(a, "!", b) := semver.compare(b, a) == 0
 semver_compare(a, "~", b) := regex.match(b, a)
 semver_compare(a, null, b) := semver.compare(b, a) == 0 if { b != null}
 semver_compare(a, null, null) := true
-
--->
+```
 
 5. Select the **Policy Sets** tab
 
