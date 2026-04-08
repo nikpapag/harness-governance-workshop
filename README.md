@@ -82,8 +82,6 @@ The target infrastructure has been pre-created for us. The application will be d
 
 - Understand how governance plays a role in the path to production
 
-- Reusable templates make developer’s life easier
-
 - DevSecOps practices can be easily achieved
 
 **Steps**
@@ -115,7 +113,8 @@ The target infrastructure has been pre-created for us. The application will be d
 
 **Summary:** Our security team has implemented orchestration of **Fortify** and **OWASP** scans for our code in a reusable form **(templates)**. In order to improve our security posture they have also added policies to enforce us to include those templates
 
-![](https://lh7-us.googleusercontent.com/docsz/AD_4nXcLr5TGcKRWOjVgB_sCAHHEeLPyd6EBdnkt2-mq_imTkZbQMEwJD03Q1wZyhWqHxoCNIIYWJWlRbnZrvZn2pPYIwTzXlOGdhMDEgn-J2JnK7lVastmfpdwTqDHXjpP0DK3TgU1gM-Ec_0iZLicWV7KpgW2FdXUCcAtraDGaEz8hI3dpWGLXkg?key=cRG2cvp_PHVW0KG2Gq6Y_A)
+<img width="981" height="467" alt="image" src="https://github.com/user-attachments/assets/262d9967-0e2f-425e-b020-2974df4fb33a" />
+
 
 **Learning Objective(s):**
 
@@ -127,7 +126,7 @@ The target infrastructure has been pre-created for us. The application will be d
 
 **Steps**
 
-1. In the existing pipeline, within the Build stage **before** PushToDockerhub step click on the plus icon to add a new step
+1. In the existing pipeline, within the Security stage click on the plus icon to add a new step
 
 2. Select use template\
    ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeC5rTVxlk7DeZeU_cINwcKo6Nf2wVW9brQ9MiCEfppJwmU-uH3QcNZ53qTxhur57KeySksoDBg9EqjhgKOgAEDKon6iNz9cFxozBe9VZssV-t77VNo6t1zPUvm6e2NOZJDKncxd9c2GM4HE-h-L4cIOl4u6Uqx_azoKchMdg?key=cRG2cvp_PHVW0KG2Gq6Y_A)
@@ -136,7 +135,7 @@ The target infrastructure has been pre-created for us. The application will be d
 
 4. Name the step **Fortify**
 
-5. In the existing pipeline, within the Build stage **after** PushToDockerhub step click on the plus icon to add a new step
+5. In the existing pipeline, within the Security stage click on the plus icon to add a new step
 
 6. Select use template
 
@@ -146,13 +145,11 @@ The target infrastructure has been pre-created for us. The application will be d
 
 9. Click **Save** and then click **Run** to execute the pipeline with the following inputs
 
-
-
 | Input       | Value | Notes |
 | ----------- | ----- | ----- |
 | Branch Name |main|       |
 
-After the **Build and Push** stage is complete, go to the **Security Tests** tab to see the deduplicated, normalized and prioritized list of vulnerabilities discovered across your scanners.
+After the **Security** stage is complete, go to the **Security Tests** tab to see the deduplicated, normalized and prioritized list of vulnerabilities discovered across your scanners.
 
 
 # Lab 3 - Continuous Deploy - Frontend
