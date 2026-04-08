@@ -312,5 +312,8 @@ semver_compare(a, null, null) := true
 
 <img width="541" height="170" alt="image" src="https://github.com/user-attachments/assets/d6ffffdd-43df-40e8-9fce-01372c07e3d2" />
 
+5. **Save** and **Run** the pipeline
+6. Pipeline fails with a different message as it detected the flow issue 
 
+<img width="981" height="346" alt="image" src="https://github.com/user-attachments/assets/f0a2db9a-1099-4b9e-a825-ca496f0cb30b" />
 
