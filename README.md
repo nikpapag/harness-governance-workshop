@@ -160,6 +160,7 @@ After the **Security** stage is complete, go to the **Security Tests** tab to se
 2. Select the **Policies** tab 
 
 3. click **+ New Policy**
+
 | Input | Value | Notes |
 | ----- | ----- | ----- |
 | **Name**  | <pre>`Runtime CVEs`</pre> |       |
