@@ -98,7 +98,15 @@ The target infrastructure has been pre-created for us. The application will be d
 | **Repository**  | <pre>`harness repo`</pre> | |
 
 
-4. 
+4. For the infrastructure select **Cloud**
+5. Select **Add Step**
+6. From the step library select the **Run** step
+7. Set the command
+
+| Input | Value | Notes |
+| ----- | ----- | ----- |
+| **Command**  | <pre>`echo "security"`</pre> | To speed up the process we just run an echo command |   
+
 
 
 
