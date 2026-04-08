@@ -317,3 +317,6 @@ semver_compare(a, null, null) := true
 
 <img width="981" height="346" alt="image" src="https://github.com/user-attachments/assets/f0a2db9a-1099-4b9e-a825-ca496f0cb30b" />
 
+1. In the pipeline in edit mode, drag and drop the CAB stage before the deploy stage
+2. **Save** and **Run** the pipeline
+3. While the pipeline is running review the CAB step output
