@@ -245,36 +245,27 @@ semver_compare(a, null, b) := semver.compare(b, a) == 0 if { b != null}
 semver_compare(a, null, null) := true
 ```
 
-5. Select the **Policy Sets** tab
-
-6. Click **+ New Policy Set** and configure as follows
+5.  Save the Policy
+6.  Select the **Policy Sets** tab
+7.  Click **+ New Policy Set** and configure as follows
 
 | Input                      | Value                     | Notes |
 | -------------------------- | ------------------------- | ----- |
-| Name                       |Criticals Not Allowed|       |
-| Entity Type                |Custom|       |
-| Event Evaluation           |On Step|       |
+| **Name**                       |<pre>`Criticals Not Allowed`</pre>|       |
+| **Entity Type**                |Custom|       |
+| **Event Evaluation**           |On Step|       |
 | Policy Evaluation Criteria |                           |       |
-| Policy to Evaluate         |Runtime OWASP CVEs|       |
+| Policy to Evaluate         |Runtime CVEs|       |
 
 7. For the new policy set, toggle the **Enforced** button
 
-**Add Policy to Pipeline**
+**Add Policy to Security Template**
 
-1. Open your pipeline
-
-2. Go to an execution that already ran, and copy the CRITICAL output variable from the OWASP step like so:\
-   ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXfYQ7ba5Q_cQ9xy2AFVZ5Mt0iZPYbyQDmBonp0pBQA13Z_IUeYdK8gRSbddtf_V3bSRfbhKWDbRSUVJTx3BTCc_VmwLIWyWLkdh89nLh0sEBA6fqQxTy0NADZ0YPZwCirNycRVGUQACdItaBotovPs5Hg6CmRpQHk5ysgV6RUlhSbIbkNxmHAo?key=cRG2cvp_PHVW0KG2Gq6Y_A)
-
-3. Select the **frontend** stage
-
-4. Before the **Rollout Deployment** Step Group, add a **Policy** type step and configure as follow
-
-| Input       | Value                                          | Notes                                                                                                                                                   |
-| ----------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name        |Policy - No Critical CVEs|                                                                                                                                                         |
-| Entity Type |Custom|                                                                                                                                                         |
-| Policy Set  |Criticals Now Allowed| Make sure to select the Project tab in order to see your Policy Set                                                                                     |
-| Payload     |{"NODE\_OSS\_CRITICAL\_COUNT": _\<variable>_}| Set the field type to Expression, then replace _\<variable>_ with OWASP output variable CRITICAL. Go to a previous execution to copy the variable path. |
-
-5. Save the pipeline and execute. Note that the pipeline fails at the policy evaluation step due to critical vulnerabilities being found by OWASP.
+1. From the secondary menu, select **Project Settings** and select **Templates**
+2. Select the **OWASP** template
+3. Click on the **Open in Template Studio**
+4. Under the **Advanced** section expand **Policy Enforcement**
+5. Add/Modify Policy Sets
+6. Select the **Security Test Policies**
+7. Click **Apply** amd **Save**
+8. Navigate to the pipeline and **run** it again
