@@ -275,7 +275,30 @@ semver_compare(a, null, null) := true
 
 <img width="1805" height="457" alt="image" src="https://github.com/user-attachments/assets/3f0ff7c0-7f5b-4266-b377-b05229485a32" />
 
-# Lab 5 - Automated Change Approval
+# Lab 6 - Exemption handling
+It seems our policy worked and blocked our Criticals!
+
+Lets loop in our security teams, to exempt these critical
+
+1. Navigate to your "Vulnerabilties" tab and perform the following action for each one of the criticals
+2. Select the CVE then Request Exemption
+3. Review the request. Add details if you would like, or just select "Create Request."
+4. Approve the exemption at a project level
+   
+<img width="1128" height="751" alt="image" src="https://github.com/user-attachments/assets/0ec87cca-379a-4c4f-924e-668c7d893634" />
+
+5. Rerun the pipeline and observe that this time the policy will not block the promotion
+
+
+ 1. From the module menu select **Security Testing Orchestration**
+ 2. Then from the left hand side menu select **Exemptions** and see the full audit history of all exemptions
+
+> [!IMPORTANT]
+> Harness has full granular role based access allowing security engineers to manage/approve exemptions
+
+
+
+# Lab 7 - Automated Change Approval
 
 ### Summary: Setup an automated CAB process based on risk validation
 
