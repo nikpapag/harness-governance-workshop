@@ -151,7 +151,7 @@ The target infrastructure has been pre-created for us. The application will be d
 
 After the **Security** stage is complete, go to the **Security Tests** tab to see the deduplicated, normalized and prioritized list of vulnerabilities discovered across your scanners.
 
-# Lab 8 - Governance/Policy as Code (Advanced)
+# Lab 4 - Governance/Policy as Code
 
 **Create a Policy to block critical CVEs**
 
@@ -269,3 +269,22 @@ semver_compare(a, null, null) := true
 6. Select the **Security Test Policies**
 7. Click **Apply** amd **Save**
 8. Navigate to the pipeline and **run** it again
+
+**Observe the failed OWASP step**
+1. Pipeline execution fails with a policy violation
+
+<img width="1805" height="457" alt="image" src="https://github.com/user-attachments/assets/3f0ff7c0-7f5b-4266-b377-b05229485a32" />
+
+# Lab 5 - Automated Change Approval
+
+### Summary: Setup an automated CAB process based on risk validation
+
+### Outcome: Fully embedded pre production change control
+
+### Learning Objective(s):
+- Understand the Harness contextual policy engine
+
+
+
+
+
