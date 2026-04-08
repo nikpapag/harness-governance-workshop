@@ -284,7 +284,18 @@ semver_compare(a, null, null) := true
 ### Learning Objective(s):
 - Understand the Harness contextual policy engine
 
+**Steps**
 
+1. From the secondary menu, select **Project Settings** and select **Templates**
+2. Open the **Automated CAB** template and observe the flow
+3. Identify the release payload as evidence and the conditional execution/promotion based on the governance validation rules
+
+**Enforce the automated change**
+
+1. From the secondary menu, select **Project Settings** and select **Policies**
+2. Select **Policy Sets**
+3. Toggle the policy enforcement for the policy **automated_cab**
+4. Navigate to the **workshop** pipeline and try to run it
 
 
 
